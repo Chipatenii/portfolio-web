@@ -1,0 +1,179 @@
+The issue you're encountering happens because the `footer` is fixed to the bottom of the viewport, potentially overlapping content at the bottom of the page. To fix this, you can add some margin or padding to the bottom of the `.container` to ensure that the footer doesn’t cover any content.
+
+Here’s the updated code with a fix:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Marketing Proposal for Geonsi Engineering Limited">
+    <title>Marketing Proposal | Geonsi Engineering Limited</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 60px; /* Added padding to prevent footer overlap */
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .budget-section {
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .highlight {
+            background-color: #dff0d8;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3c763d;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+        }
+        .cost {
+            color: #FF5733;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Digital Marketing Proposal for Geonsi Engineering Limited</h1>
+    </header>
+
+    <div class="container">
+        <h2>Objective</h2>
+        <p>The goal is to enhance Geonsi Engineering Limited's online presence, attract B2B clients, increase brand visibility, and redesign the website to improve user engagement.</p>
+
+        <div class="budget-section">
+            <h2>Low-Budget Marketing Proposal</h2>
+            
+            <h3>1. Website Redesign</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K12,000 - K20,000</span> (One-time)</p>
+                <p>Includes a simple and professional website design using a CMS like WordPress with basic features such as contact forms, service pages, and SEO optimization.</p>
+            </div>
+
+            <h3>2. Social Media Management</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K2,500/month</span></p>
+                <p>Manages content on Facebook, LinkedIn, and Instagram with 3-4 posts per week, sharing service promotions, behind-the-scenes content, and more.</p>
+            </div>
+
+            <h3>3. Google My Business</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K1,000</span> (One-time)</p>
+                <p>Optimize Geonsi’s visibility in local search results by setting up a Google My Business profile.</p>
+            </div>
+
+            <h3>4. Email Marketing</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K1,200/month</span></p>
+                <p>Monthly newsletters targeting potential B2B clients, highlighting services and completed projects.</p>
+            </div>
+
+            <h3>5. Search Engine Optimization (SEO)</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K2,000/month</span></p>
+                <p>Improve the website's ranking on Google through strategic keyword optimization.</p>
+            </div>
+
+            <h3>Total Estimated Costs</h3>
+            <ul>
+                <li>Website Redesign: <span class="cost">K12,000 - K20,000</span> (One-time)</li>
+                <li>Monthly Budget: <span class="cost">K5,700</span> (excluding website)</li>
+            </ul>
+        </div>
+
+        <div class="budget-section">
+            <h2>Premium-Budget Marketing Proposal</h2>
+            
+            <h3>1. Website Redesign (Premium)</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K35,000 - K50,000</span> (One-time)</p>
+                <p>Custom-built website with high-end design, real-time chat function, advanced SEO, and a portfolio section.</p>
+            </div>
+
+            <h3>2. Social Media Management & Content Creation</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K5,000/month</span></p>
+                <p>Manage content across multiple platforms with engaging visuals, custom infographics, and video content.</p>
+            </div>
+
+            <h3>3. Google & LinkedIn Ads</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K8,000/month</span></p>
+                <p>Run targeted ads aimed at key industries on Google and LinkedIn.</p>
+            </div>
+
+            <h3>4. Search Engine Optimization (SEO)</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K5,000/month</span></p>
+                <p>Advanced SEO strategy to improve organic traffic and increase visibility.</p>
+            </div>
+
+            <h3>5. Email Marketing (Advanced)</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K2,500/month</span></p>
+                <p>Bi-weekly emails targeting high-end B2B clients with case studies and industry insights.</p>
+            </div>
+
+            <h3>6. Video Marketing</h3>
+            <div class="highlight">
+                <p><strong>Cost:</strong> <span class="cost">K6,000</span> (One-time)</p>
+                <p>Create a professional 2-minute promotional video showcasing the company’s services.</p>
+            </div>
+
+            <h3>Total Estimated Costs</h3>
+            <ul>
+                <li>Website Redesign: <span class="cost">K35,000 - K50,000</span> (One-time)</li>
+                <li>Monthly Budget: <span class="cost">K20,500</span> (excluding website and video creation)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Geonsi Engineering Limited | Marketing Proposal by Ostento Media Agency</p>
+    </footer>
+
+</body>
+</html>
